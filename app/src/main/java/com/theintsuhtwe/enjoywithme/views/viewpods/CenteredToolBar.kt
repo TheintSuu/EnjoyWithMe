@@ -39,7 +39,7 @@ class CenteredToolBar : Toolbar {
         if (titleView == null){
             titleView = TextView(context)
             titleView?.setSingleLine()
-            titleView?.ellipsize = TextUtils.TruncateAt.END
+           titleView?.ellipsize = TextUtils.TruncateAt.END
             titleView?.gravity = Gravity.CENTER
             titleView?.setTextAppearance(context, R.style.TextAppearance_AppCompat_Widget_ActionBar_Title)
             var lp = LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
