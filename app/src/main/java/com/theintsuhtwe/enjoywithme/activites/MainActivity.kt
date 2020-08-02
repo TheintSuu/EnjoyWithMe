@@ -1,19 +1,12 @@
-package com.theintsuhtwe.enjoywithme
+package com.theintsuhtwe.enjoywithme.activites
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
-import android.view.MenuItem
-import androidx.core.view.GravityCompat
-import com.custom.sliderimage.logic.SliderImage
+import com.theintsuhtwe.enjoywithme.R
 import com.theintsuhtwe.enjoywithme.fragments.MainFragment
 import com.theintsuhtwe.enjoywithme.utils.FRAGMENT_MAIN
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_main.*
-import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.toolbar_view_pod.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //create toolbar
         setUpToolbar()
 
 

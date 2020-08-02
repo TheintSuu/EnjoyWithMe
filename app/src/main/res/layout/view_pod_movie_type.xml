@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:background="@color/colorFragment"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/btnTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_access_time_24"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tvTimeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btnTime"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:text="2h 13 min"
+        style="@style/GrayText"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tvMovieFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvTimeDetail"
+        android:padding="6dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="Family"
+        android:background="@drawable/btn_movie_category"
+        style="@style/GrayText"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tvMovieFantasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvMovieFamily"
+        android:padding="6dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="Fantasy"
+        android:background="@drawable/btn_movie_category"
+        style="@style/GrayText"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/tvMovieAdvanture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvMovieFantasy"
+        android:padding="6dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:text="Advanture"
+        android:background="@drawable/btn_movie_category"
+        style="@style/GrayText"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+    <ImageView
+        android:id="@+id/tvMovieFavourite"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_baseline_favorite_gray_border_24"
+        android:padding="6dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_alignParentEnd="true"
+        style="@style/GrayText"
+        android:layout_marginStart="@dimen/margin_medium"/>
+
+</RelativeLayout>

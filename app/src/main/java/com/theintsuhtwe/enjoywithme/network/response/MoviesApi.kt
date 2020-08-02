@@ -11,7 +11,8 @@ import retrofit2.http.POST
 
 interface MoviesApi {
 
-//    @GET(GET_UPCOMING_MOVIES)
-//    fun getAllMovies(@Field(API_KEY) accessToken : String)
-//            : Observable<GetAllMoviesResponse>
+    @FormUrlEncoded
+    @GET(GET_UPCOMING_MOVIES)
+    fun getAllMovies(@Field(API_KEY) accessToken : String)
+            : Observable<GetAllMoviesResponse>
 }

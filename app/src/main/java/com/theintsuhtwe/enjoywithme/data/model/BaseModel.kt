@@ -3,6 +3,7 @@ package com.theintsuhtwe.enjoywithme.data.model
 
 
 import android.content.Context
+import com.padcmyanmar.padcx.padc_x_recyclerview_ypst.persistence.db.MoviesDB
 import com.theintsuhtwe.enjoywithme.network.response.MoviesApi
 import com.theintsuhtwe.enjoywithme.utils.BASE_URL
 import okhttp3.OkHttpClient
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit
 abstract class BaseModel {
 
     protected var mMoviesApi: MoviesApi
-
+    protected lateinit var mTheDB: MoviesDB
     init {
         val mOkHttpClient = OkHttpClient.Builder()
             .connectTimeout(15, TimeUnit.SECONDS)
@@ -32,7 +33,7 @@ abstract class BaseModel {
         mMoviesApi = retrofit.create(MoviesApi::class.java)
     }
 
-//    fun initDatabase(context: Context) {
-//        mTheDB = NewsDB.getDBInstance(context)
-//    }
+    fun initDatabase(context: Context) {
+        mTheDB = MoviesDB.getDBInstance(context)
+    }
 }

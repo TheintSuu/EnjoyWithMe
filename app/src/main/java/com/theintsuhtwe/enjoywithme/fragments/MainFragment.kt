@@ -9,15 +9,13 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.custom.sliderimage.logic.SliderImage
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import com.theintsuhtwe.enjoywithme.R
 import com.theintsuhtwe.enjoywithme.adapters.*
-import com.theintsuhtwe.enjoywithme.data.vos.PlayingMoviesVO
+import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenter
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenterImpl
 import com.theintsuhtwe.enjoywithme.mvp.views.MainView
 import kotlinx.android.synthetic.main.fragment_main.*
-import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.item_upcoming_view.view.*
 import kotlinx.android.synthetic.main.view_pod_actor.*
 import kotlinx.android.synthetic.main.view_pod_showcases.*
@@ -61,6 +59,7 @@ class MainFragment : Fragment(), MainView {
         val v = inflater.inflate(R.layout.fragment_main, container, false)
 
 
+        mPresenter.onUiReady(this)
 
         // Create slider image component
         val sliderImage = SliderImage(activity!!)
@@ -149,16 +148,16 @@ class MainFragment : Fragment(), MainView {
        })
     }
 
-    override fun displayMoviesList(newsList: List<PlayingMoviesVO>) {
-
+    override fun displayMoviesList(newsList: List<MoviesVO>) {
+        mAdapter.setData(newsList.toMutableList())
     }
 
     override fun navigateToMoviesDetails(newsId: Int) {
 
     }
 
-    override fun displayMovieListByCaterogry(newsList: List<PlayingMoviesVO>) {
-        TODO("Not yet implemented")
+    override fun displayMovieListByCaterogry(newsList: List<MoviesVO>) {
+
     }
 
 

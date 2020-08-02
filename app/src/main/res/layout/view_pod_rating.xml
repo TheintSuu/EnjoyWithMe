@@ -8,7 +8,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:src="@drawable/ic_baseline_star_24"
         android:textColor="@android:color/white" />
 
@@ -18,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:layout_toEndOf="@id/ivStar1"
         android:src="@drawable/ic_baseline_star_24"
         android:textColor="@android:color/white" />
@@ -29,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:layout_toEndOf="@id/ivStar2"
         android:src="@drawable/ic_baseline_star_24"
         android:textColor="@android:color/white" />
@@ -40,7 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:layout_toEndOf="@id/ivStar3"
         android:src="@drawable/ic_baseline_star_24"
         android:textColor="@android:color/white" />
@@ -51,7 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="@dimen/margin_medium"
         android:layout_toEndOf="@id/ivStar4"
         android:src="@drawable/ic_baseline_star_24"
         android:textColor="@android:color/white" />

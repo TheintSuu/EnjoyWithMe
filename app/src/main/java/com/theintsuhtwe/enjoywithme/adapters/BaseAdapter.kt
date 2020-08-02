@@ -5,19 +5,22 @@ import com.example.travelapp.view.viewholder.BaseViewHolder
 
 abstract class BaseAdapter<T: BaseViewHolder<W>,W> : RecyclerView.Adapter<T>() {
 
-    var mDataList: MutableList<W> = mutableListOf()
-    override fun onBindViewHolder(holder: T, position: Int) {
-
-    }
-
+    var mData: MutableList<W> = mutableListOf()
     override fun getItemCount(): Int {
-        return 5
+        return mData.count()
     }
 
-    fun setData(data: List<W>) {
+    override fun onBindViewHolder(holder: T, position: Int) {
+        holder.bindData(mData[position])
+    }
 
-        mDataList.clear()
-        mDataList.addAll(data)
+    fun setData(data : MutableList<W>){
+        mData = data
+        notifyDataSetChanged()
+    }
+
+    fun appendNewData(data : List<W>){
+        mData.addAll(data)
         notifyDataSetChanged()
     }
 }

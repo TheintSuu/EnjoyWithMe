@@ -1,10 +1,11 @@
 import com.google.gson.annotations.SerializedName
-import com.theintsuhtwe.enjoywithme.data.vos.PlayingMoviesVO
+import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 
 data class GetAllMoviesResponse(
-    @SerializedName("code") val code : Int  = 0,
-    @SerializedName("message") val message : String = "",
-    @SerializedName("data") val data: ArrayList<PlayingMoviesVO>? = null
+    @SerializedName("page") val code : Int  = 0,
+    @SerializedName("total_results") val totalResult : Int  = 0,
+    @SerializedName("total_pages") val totalPage : Int = 0,
+    @SerializedName("results") val data: ArrayList<MoviesVO>? = null
 ){
     fun isResponseOk() = (code == 200) && (data != null)
 }

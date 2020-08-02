@@ -11,3 +11,7 @@ package com.theintsuhtwe.enjoywithme.utils
     const val API_KEY_CODE = "8c6d7c76d083cf266e8dac99a2bf2dee"
 
     const val FRAGMENT_MAIN = "MainFragment"
+
+//Error Messages
+const val EM_NO_INTERNET_CONNECTION = "No Internet Connection"
+const val EM_NO_NEWS_AVAILABLE = "There are no news available"

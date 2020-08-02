@@ -4,20 +4,20 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.travelapp.view.viewholder.BaseViewHolder
 import com.theintsuhtwe.enjoywithme.adapters.MovieItemAdapter
-import com.theintsuhtwe.enjoywithme.data.vos.PlayingMoviesVO
+import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 import com.theintsuhtwe.enjoywithme.delegate.MovieItemDelegate
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
-class MainViewHolder(itemView: View, delegate: MovieItemDelegate) : BaseViewHolder<PlayingMoviesVO>(itemView) {
+class MainViewHolder(itemView: View, delegate: MovieItemDelegate) : BaseViewHolder<MoviesVO>(itemView) {
 
     val mDelegate = delegate
 
 
-    private val movieList = mutableListOf<PlayingMoviesVO>()
+    private val movieList = mutableListOf<MoviesVO>()
 
     private lateinit var mAdapter: MovieItemAdapter
 
-    override fun bindData(data: PlayingMoviesVO) {
+    override fun bindData(data: MoviesVO) {
 
         mData = data
 

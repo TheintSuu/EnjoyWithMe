@@ -1,10 +1,14 @@
 package com.theintsuhtwe.enjoywithme.mvp.presenters
 
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import com.theintsuhtwe.enjoywithme.data.model.MoviesModel
+import com.theintsuhtwe.enjoywithme.data.model.MoviesModelImpl
 import com.theintsuhtwe.enjoywithme.mvp.views.MainView
 
 class MainPresenterImpl() : MainPresenter, AbstractBasePresenter<MainView>() {
 
+    private val mMoviesModel  = MoviesModelImpl
 
     override fun onUiReady(lifeCycleOwner: LifecycleOwner) {
         requestAllMovies(lifeCycleOwner)
@@ -24,6 +28,14 @@ class MainPresenterImpl() : MainPresenter, AbstractBasePresenter<MainView>() {
 
     private fun requestAllMovies(lifeCycleOwner: LifecycleOwner) {
 
+        mMoviesModel.getAllMovies (onError = {
+           // mView?.disableSwipeRefresh()
+            // mView?.displayEmptyView()
+        }).observe(lifeCycleOwner, Observer {
+           // mView?.disableSwipeRefresh()
+            //  if (it.isEmpty()) mView?.displayEmptyView() else mView?.displayNewsList(it)
+            mView?.displayMoviesList(it)
+        })
     }
 
     private fun loadAllMoviesFromApi(){

@@ -8,15 +8,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.theintsuhtwe.enjoywithme.R
-import com.theintsuhtwe.enjoywithme.adapters.ActionTaskAdapter
 import com.theintsuhtwe.enjoywithme.adapters.MovieItemAdapter
-import com.theintsuhtwe.enjoywithme.data.vos.PlayingMoviesVO
+import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenter
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenterImpl
 import com.theintsuhtwe.enjoywithme.mvp.views.ActionView
-import com.theintsuhtwe.enjoywithme.mvp.views.MainView
 import kotlinx.android.synthetic.main.fragment_action.*
-import kotlinx.android.synthetic.main.fragment_main.*
 
 class ActionFragment : Fragment(), ActionView {
 
@@ -62,7 +59,7 @@ class ActionFragment : Fragment(), ActionView {
         //mPresenter.initPresenter(this)
     }
 
-    override fun displayMoviesList(newsList: List<PlayingMoviesVO>) {
+    override fun displayMoviesList(newsList: List<MoviesVO>) {
 
     }
 
