@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 import com.theintsuhtwe.enjoywithme.utils.API_KEY
+import com.theintsuhtwe.enjoywithme.utils.API_KEY_CODE
 import com.theintsuhtwe.enjoywithme.utils.EM_NO_INTERNET_CONNECTION
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -19,7 +20,7 @@ object MoviesModelImpl : MoviesModel, BaseModel() {
     @SuppressLint("CheckResult")
     override fun getAllMoviesFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit) {
         mMoviesApi
-            .getAllMovies(API_KEY)
+            .getAllMovies(API_KEY_CODE)
             .map { it.data?.toList() ?: listOf() }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -28,6 +29,7 @@ object MoviesModelImpl : MoviesModel, BaseModel() {
             },{
                 onError(it.localizedMessage ?: EM_NO_INTERNET_CONNECTION)
             })
+
     }
 
 

@@ -1,13 +1,10 @@
-package com.padcmyanmar.padcx.padc_x_recyclerview_ypst.persistence.daos
+package com.theintsuhtwe.enjoywithme.persistence.daos
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 
-/**
- * Created by Ye Pyae Sone Tun
- * on 2020-02-14.
- */
+
 
 @Dao
 interface MoviesDao {
