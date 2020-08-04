@@ -6,16 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.theintsuhtwe.enjoywithme.data.model.TopRateMovieDao
 import com.theintsuhtwe.enjoywithme.data.vos.*
-import com.theintsuhtwe.enjoywithme.persistence.daos.ActorDao
-import com.theintsuhtwe.enjoywithme.persistence.daos.MoviesDao
-import com.theintsuhtwe.enjoywithme.persistence.daos.PopularMoviesDao
+import com.theintsuhtwe.enjoywithme.persistence.daos.*
 
 /**
  * Created by Ye Pyae Sone Tun
  * on 2020-02-14.
  */
 
-@Database(entities = [MoviesVO::class, ActorVO::class, PopularMoviesVO::class, TopRatedVO::class, NowPlayingVO::class], version = 7, exportSchema = false)
+@Database(entities = [MoviesVO::class, ActorVO::class, PopularMoviesVO::class, TopRatedVO::class, NowPlayingVO::class, GenersVO::class, CastAndCrewVO::class], version = 9, exportSchema = false)
 abstract class MoviesDB : RoomDatabase() {
     companion object {
         val DB_NAME = "PADC_Movies_X.DB"
@@ -39,5 +37,9 @@ abstract class MoviesDB : RoomDatabase() {
     abstract fun MoviesDao(): MoviesDao
     abstract fun TopRatedVODao(): TopRateMovieDao
     abstract fun PopularMoviesDao(): PopularMoviesDao
+    abstract fun  NowPlayingMovieDao(): NowPlayingMovieDao
     abstract fun ActorsDao(): ActorDao
+    abstract fun GenersDao(): GenersDao
+    abstract fun CrewAndCrewDao() : CastAndCrewDao
+    abstract fun MovieDetailDao () : MovieDetailDao
 }

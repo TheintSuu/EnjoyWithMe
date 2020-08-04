@@ -3,6 +3,7 @@ package com.theintsuhtwe.enjoywithme.persistence.daos
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.theintsuhtwe.enjoywithme.data.vos.ActorVO
+import com.theintsuhtwe.enjoywithme.data.vos.PopularMoviesVO
 
 
 @Dao
@@ -25,4 +26,7 @@ interface ActorDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAllActor(Actor: List<ActorVO>)
+
+    @Query("SELECT * FROM actor ORDER BY id Desc LIMIT 5")
+    fun getPosterPath():LiveData<List<ActorVO>>
 }

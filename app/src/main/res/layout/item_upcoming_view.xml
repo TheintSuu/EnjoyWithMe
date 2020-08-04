@@ -1,63 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="2dp"
-    android:background="@color/colorFragment"
-    app:cardUseCompatPadding="true"
-    >
-    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="275dp">
+
+    <ImageView
+        android:id="@+id/ivPoster"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yibo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-        <com.custom.sliderimage.logic.SliderImage
-            android:id="@+id/slider"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" >
-
-        </com.custom.sliderimage.logic.SliderImage>
-
-        <TextView
-            android:id="@+id/tvMovieTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The Wolverine 2013."
-            android:textSize="24sp"
-            android:layout_above="@id/tvNumberOfTour"
-            android:layout_marginBottom="@dimen/margin_medium"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginLeft="@dimen/margin_medium"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            />
-
-        <TextView
-            android:id="@+id/tvNumberOfTour"
-            style="@style/GrayText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Offiical Review."
-            android:layout_alignParentBottom="true"
-            android:textSize="24sp"
-            android:textColor="@android:color/white"
-            android:layout_alignStart="@id/tvMovieTitle"
-            />
-
-
-    </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
         android:src="@drawable/ic_baseline_play_arrow_24"
-        android:id="@+id/btnPlay"
-        android:layout_gravity="center"
-        android:elevation="@dimen/margin_small"
-        android:background="@drawable/circle_button"
-        />
+       android:background="@drawable/circle_button"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivPoster"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginBottom="32dp"
+        android:text="The Wolverine 2013. Official Review"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_heading_1x"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPoster"
+        app:layout_constraintStart_toStartOf="@+id/ivPoster" />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

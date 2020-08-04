@@ -21,6 +21,7 @@ class MoviesVO {
     @ColumnInfo(name = "moview_title")
     var movieTitle: String ?= null
     @ColumnInfo(name = "poster_path")
+    @SerializedName("poster_path")
     var posterPath: String ?= null
     @ColumnInfo(name = "popularity")
     var popularity: Double ?= null

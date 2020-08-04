@@ -15,7 +15,7 @@
 
 
         <ImageView
-            android:id="@+id/slider"
+            android:id="@+id/ivShowCaseImage"
             android:src="@drawable/poster"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Passengers"
             android:textSize="24sp"
-            android:layout_above="@id/tvNumberOfTour"
+            android:layout_above="@id/tvDate"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginLeft="@dimen/margin_medium"
@@ -38,7 +38,7 @@
             />
 
         <TextView
-            android:id="@+id/tvNumberOfTour"
+            android:id="@+id/tvDate"
             style="@style/GrayText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -3,7 +3,6 @@ package com.theintsuhtwe.enjoywithme.data.model
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
-import com.theintsuhtwe.enjoywithme.utils.API_KEY
 import com.theintsuhtwe.enjoywithme.utils.API_KEY_CODE
 import com.theintsuhtwe.enjoywithme.utils.EM_NO_INTERNET_CONNECTION
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -21,7 +20,7 @@ object MoviesModelImpl : MoviesModel, BaseModel() {
     override fun getAllMoviesFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit) {
         mMoviesApi
             .getAllMovies(API_KEY_CODE)
-            .map { it.data?.toList() ?: listOf() }
+            .map { it.data.toList() }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe ({

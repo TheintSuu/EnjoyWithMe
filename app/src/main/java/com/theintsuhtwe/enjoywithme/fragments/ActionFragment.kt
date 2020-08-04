@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.theintsuhtwe.enjoywithme.R
-import com.theintsuhtwe.enjoywithme.adapters.MovieItemAdapter
+import com.theintsuhtwe.enjoywithme.adapters.PopularMoiveAdapter
 import com.theintsuhtwe.enjoywithme.data.vos.MoviesVO
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenter
 import com.theintsuhtwe.enjoywithme.mvp.presenters.MainPresenterImpl
@@ -25,7 +25,7 @@ class ActionFragment : Fragment(), ActionView {
         }
     }
 
-    private lateinit var mAdapter: MovieItemAdapter
+    private lateinit var mAdapter: PopularMoiveAdapter
 
     private lateinit var mPresenter : MainPresenter
 
@@ -48,7 +48,7 @@ class ActionFragment : Fragment(), ActionView {
     private fun setUpRecyclerView() {
         with(rvAction){
 
-            mAdapter = MovieItemAdapter(mPresenter)
+            mAdapter = PopularMoiveAdapter(mPresenter)
             adapter = mAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }

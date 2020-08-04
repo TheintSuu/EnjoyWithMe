@@ -1,7 +1,7 @@
 package com.theintsuhtwe.enjoywithme.data.model
 
 import androidx.lifecycle.LiveData
-import com.aungpyaesone.firebasetest.padcx_movieapp_aps.datas.vos.PopularMoviesVO
+import com.theintsuhtwe.enjoywithme.data.vos.PopularMoviesVO
 
 
 interface PopularMovieModel {

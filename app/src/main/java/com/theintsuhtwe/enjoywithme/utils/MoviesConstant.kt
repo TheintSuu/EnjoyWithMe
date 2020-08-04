@@ -2,9 +2,19 @@ package com.theintsuhtwe.enjoywithme.utils
 
 
 
-    const val BASE_URL = "https://api.themoviedb.org/3/movie/"
+    const val BASE_URL = "https://api.themoviedb.org/3/"
 
-    const val  GET_UPCOMING_MOVIES = "upcoming"
+    const val  GET_UPCOMING_MOVIES = "movie/upcoming"
+
+    const val  GET_POPULAR_MOVIES = "movie/popular"
+
+    const val  GET_NOW_PLAYING_MOVIES = "movie/now_playing"
+
+    const val  GET_TOP_RATED_MOVIES = "movie/top_rated"
+
+    const val  GET_ACTORS = "person/popular"
+
+    const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500/"
 
     const val API_KEY = "api_key"
 

@@ -1,7 +1,8 @@
-package com.aungpyaesone.firebasetest.padcx_movieapp_aps.datas.models
+package com.theintsuhtwe.enjoywithme.data.model
 
 import androidx.lifecycle.LiveData
-import com.aungpyaesone.firebasetest.padcx_movieapp_aps.datas.vos.TopRatedVO
+import com.theintsuhtwe.enjoywithme.data.vos.TopRatedVO
+
 
 interface TopRateMovieModel  {
     fun getTopMovieFromApiSaveToDB(onSuccess:()->Unit,onError:(String) ->Unit)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="200dp"
-    android:layout_height="wrap_content"
+    android:layout_height="370dp"
     android:background="@color/colorFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/margin_medium_2"
@@ -16,18 +16,21 @@
         <ImageView
             android:id="@+id/imgPoster"
             android:layout_width="185dp"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:scaleType="centerCrop"
             android:src="@drawable/poster" />
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_medium"
             android:layout_below="@id/imgPoster"
             android:padding="4dp"
             android:text="Westworld"
+            android:textSize="@dimen/text_regular_2x"
             style="@style/GrayText"
              />
 
@@ -35,6 +38,7 @@
             android:id="@+id/tvRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
             android:text="8.20"
             style="@style/GrayText"
             android:layout_below="@id/tvTitle"
@@ -47,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/tvTitle"
+        android:layout_marginEnd="@dimen/margin_small"
         layout="@layout/view_pod_rating"/>
 
     </RelativeLayout>

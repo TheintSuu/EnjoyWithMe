@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit
 abstract class BaseModel {
 
     protected var mMoviesApi: MoviesApi
+
     protected lateinit var mTheDB: MoviesDB
     init {
         val mOkHttpClient = OkHttpClient.Builder()
@@ -31,6 +32,9 @@ abstract class BaseModel {
             .build()
 
         mMoviesApi = retrofit.create(MoviesApi::class.java)
+
+
+
     }
 
     fun initDatabase(context: Context) {

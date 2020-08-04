@@ -11,16 +11,16 @@ import com.theintsuhtwe.enjoywithme.data.vos.PopularMoviesVO
 @Dao
 interface PopularMoviesDao {
     @Query("SELECT * FROM popularMovie")
-    fun getAllTopRateMovie() : LiveData<List<PopularMoviesVO>>
+    fun getAllPopularMovie() : LiveData<List<PopularMoviesVO>>
 
     @Query("SELECT * FROM popularMovie WHERE id = :movieId")
-    fun getMovieById(movieId :Int) : LiveData<PopularMoviesVO>
+    fun getPopularById(movieId :Int) : LiveData<PopularMoviesVO>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTopRateMovie(topRateMovie: PopularMoviesVO)
+    fun insertPopularMovie(topRateMovie: PopularMoviesVO)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTopRateMovieList(topRateMovie: List<PopularMoviesVO>)
+    fun insertPopularMovieList(topRateMovie: List<PopularMoviesVO>)
 
     @Query("SELECT * FROM popularMovie ORDER BY id Desc LIMIT 5")
     fun getPosterPath():LiveData<List<PopularMoviesVO>>

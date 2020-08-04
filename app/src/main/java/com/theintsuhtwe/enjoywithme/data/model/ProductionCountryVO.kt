@@ -1,4 +1,4 @@
-package com.aungpyaesone.firebasetest.padcx_movieapp_aps.datas.vos
+package com.theintsuhtwe.enjoywithme.data.model
 
 import com.google.gson.annotations.SerializedName
 

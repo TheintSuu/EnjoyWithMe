@@ -161,7 +161,7 @@
 
             <include
                 layout="@layout/view_pod_actor"
-                android:id="@+id/actorLayout"
+                android:id="@+id/detailActorLayout"
                 android:layout_marginHorizontal="@dimen/margin_medium_2"
                 android:layout_below="@id/storyLayout"
                 android:layout_height="wrap_content"
@@ -169,14 +169,15 @@
 
             <include
                 layout="@layout/view_pod_about_film"
-                android:layout_below="@id/actorLayout"
+                android:layout_below="@id/detailActorLayout"
                 android:id="@+id/aboutFilmLayout"
                 android:layout_marginHorizontal="@dimen/margin_medium_2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
 
             <include
-                layout="@layout/view_pod_actor"
+                android:id="@+id/creatorLayout"
+                layout="@layout/view_pod_creator"
                 android:layout_marginHorizontal="@dimen/margin_medium_2"
                 android:layout_below="@id/aboutFilmLayout"
                 android:layout_height="wrap_content"
